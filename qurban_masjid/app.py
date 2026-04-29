@@ -5,14 +5,14 @@ from datetime import datetime
 
 # Konfigurasi halaman
 st.set_page_config(
-    page_title="QurbanHub - Sistem Kurban Digital Masjid",
+    page_title="Qurban - Sistem Kurban Digital Masjid",
     page_icon="🕌",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # ============ HARGA TETAP ============
-HARGA_KAMBING = 2500000  # Rp 2.500.000
+HARGA_KAMBING = 3500000  # Rp 3.500.000
 HARGA_SAPI = 15000000    # Rp 15.000.000
 
 # ============ CUSTOM CSS ============
@@ -194,7 +194,7 @@ st.markdown("""
 # ============ HERO SECTION ============
 st.markdown("""
 <div class="hero">
-    <h1>🕌 QurbanHub 1446 H 🕌</h1>
+    <h1>🕌 Qurban 1446 H 🕌</h1>
     <h3>✨ Tebarkan Berkah dengan Qurban Digital ✨</h3>
     <p>"Maka dirikanlah shalat karena Tuhanmu dan berqurbanlah" (QS. Al-Kautsar: 2)</p>
 </div>
