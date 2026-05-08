@@ -180,7 +180,7 @@ st.markdown("""
 # ============ STATISTIK ============
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    st.markdown('<div class="stat-badge"><span class="number">🐐 8+</span><div class="label">Jenis Hewan</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="stat-badge"><span class="number">🐐 5+</span><div class="label">Jenis Hewan</div></div>', unsafe_allow_html=True)
 with col2:
     st.markdown('<div class="stat-badge"><span class="number">📍 3</span><div class="label">Lokasi Penyaluran</div></div>', unsafe_allow_html=True)
 with col3:
