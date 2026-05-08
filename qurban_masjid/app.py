@@ -189,7 +189,7 @@ with col4:
     st.markdown('<div class="stat-badge"><span class="number">🌙 1447 H</span><div class="label">Tahun Qurban</div></div>', unsafe_allow_html=True)
 
 # ============ KATALOG ============
-st.markdown('<div class="catalog-title"><h2>📦 Katalog Hewan Qurban</h2><p>Pilih hewan qurban sesuai kemampuan Anda</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="catalog-title"><h2> Katalog Hewan Qurban</h2><p>Pilih hewan qurban sesuai kemampuan Anda</p></div>', unsafe_allow_html=True)
 
 # Tampilkan grid 3 kolom
 cols = st.columns(3)
@@ -217,7 +217,7 @@ if st.session_state.show_form and st.session_state.selected_hewan:
     with st.form(key="form_pemesanan"):
         st.markdown(f"""
         <div style="background: #f0f7f0; padding: 0.8rem; border-radius: 16px; margin-bottom: 1rem;">
-            <h3 style="color:#1a5a3a;">✏️ Isi data berikut</h3>
+            <h3 style="color:#1a5a3a;"> Isi data berikut</h3>
             <p><strong>Hewan:</strong> {hewan['nama']} | <strong>Harga:</strong> Rp {hewan['harga']:,.0f}</p>
         </div>
         """, unsafe_allow_html=True)
@@ -233,13 +233,13 @@ if st.session_state.show_form and st.session_state.selected_hewan:
         
         bukti_file = None
         if "Transfer" in metode:
-            st.info("🏦 Silakan transfer ke BSI 7188888888 a.n Masjid An-Nur")
+            st.info(" Silakan transfer ke BSI 7188888888 a.n Masjid An-Nur")
             bukti_file = st.file_uploader("Upload bukti transfer", type=["jpg", "png", "pdf"])
         
         # Jumlah yang mau dibayar
         bayar = st.number_input("Jumlah yang ingin dibayar (Rp)", min_value=0, max_value=hewan['harga'], value=min(hewan['harga'], 500000), step=50000)
         
-        submitted = st.form_submit_button("✅ KIRIM PEMESANAN", use_container_width=True)
+        submitted = st.form_submit_button(" KIRIM PEMESANAN", use_container_width=True)
         
         if submitted:
             error_msg = []
@@ -283,7 +283,7 @@ if st.session_state.show_form and st.session_state.selected_hewan:
                 
                 st.balloons()
                 st.success(f"""
-                ✅ **Pesanan berhasil dikirim!**
+                 **Pesanan berhasil dikirim!**
                 
                 Terima kasih {nama_mudhohi}, pesanan {hewan['nama']} telah tercatat.
                 Panitia akan menghubungi Anda dalam 1x24 jam.
@@ -295,7 +295,7 @@ if st.session_state.show_form and st.session_state.selected_hewan:
                 st.rerun()
     
     # Tombol close modal
-    if st.button("❌ Tutup", use_container_width=True):
+    if st.button(" Tutup", use_container_width=True):
         st.session_state.show_form = False
         st.session_state.selected_hewan = None
         st.rerun()
@@ -316,19 +316,19 @@ st.markdown("""
 st.markdown("""
 <div class="footer">
     <h4>🕌 Masjid An-Nur</h4>
-    <p>Jalan Kenangan No. 123, Kota Santri | Telp: (021) 1234-5678<br/>
+    <p>Jalan Candi No. 123, Kota Sidoarjo | Telp: (021) 1234-5678<br/>
     WhatsApp: 0812-3456-7890 | Email: qurban@masjidannur.id</p>
-    <small>© 1447 H / 2026 M • Layanan Qurban Digital Masjid An-Nur</small>
+    <small>© 1447 H / 2026 M • Bintan Nabilah-Dini Oktabiyanti-Sinta Bella-Aulia Riska</small>
 </div>
 """, unsafe_allow_html=True)
 
 # ============ SIDEBAR ADMIN ============
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/2888/2888406.png", width=50)
-    st.markdown("### 🕌 Admin Masjid")
+    st.markdown("###  Admin Masjid")
     
     if not st.session_state.admin_logged_in:
-        with st.expander("🔐 Login Admin", expanded=True):
+        with st.expander(" Login Admin", expanded=True):
             user = st.text_input("Username", placeholder="admin")
             pwd = st.text_input("Password", type="password", placeholder="admin123")
             if st.button("Login", use_container_width=True):
@@ -338,13 +338,13 @@ with st.sidebar:
                 else:
                     st.error("Salah!")
     else:
-        st.success("✅ Admin aktif")
+        st.success(" Admin aktif")
         
         # Dashboard Admin
         df = load_pesanan()
         
         st.markdown("---")
-        st.markdown("### 📋 Dashboard Admin")
+        st.markdown("###  Dashboard Admin")
         
         if df.empty:
             st.info("Belum ada pesanan")
@@ -353,9 +353,9 @@ with st.sidebar:
             st.metric("Pesanan Lunas", df[df["Status_Pembayaran"] == "Lunas"].shape[0])
             st.metric("Kurang Bayar", df[df["Status_Pembayaran"] == "Kurang Bayar"].shape[0])
         
-        menu = st.radio("Menu", ["📝 Daftar Pesanan", "💰 Update Status", "📁 Laporan"], key="admin_menu")
+        menu = st.radio("Menu", [" Daftar Pesanan", " Update Status", " Laporan"], key="admin_menu")
         
-        if menu == "📝 Daftar Pesanan":
+        if menu == " Daftar Pesanan":
             st.dataframe(df, use_container_width=True)
             
             # Lihat detail & bukti
@@ -366,7 +366,7 @@ with st.sidebar:
                 if detail["Bukti_Transfer"] and os.path.exists(detail["Bukti_Transfer"]):
                     st.image(detail["Bukti_Transfer"], caption="Bukti Transfer", width=200)
         
-        elif menu == "💰 Update Status":
+        elif menu == " Update Status":
             if not df.empty:
                 pilih = st.selectbox("Pilih pesanan", df["Nama_Mudhohi"].tolist())
                 idx = df[df["Nama_Mudhohi"] == pilih].index[0]
@@ -377,7 +377,7 @@ with st.sidebar:
                     st.success("Status diupdate!")
                     st.rerun()
         
-        elif menu == "📁 Laporan":
+        elif menu == " Laporan":
             st.download_button("Download CSV", df.to_csv(index=False), "laporan_qurban.csv")
         
         if st.button("Logout"):
