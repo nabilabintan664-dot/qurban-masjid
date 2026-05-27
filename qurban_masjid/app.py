@@ -303,7 +303,7 @@ if st.session_state.show_form and st.session_state.selected_hewan:
 # ============ KEUNGGULAN ============
 st.markdown("""
 <div style="background: white; border-radius: 24px; padding: 1.5rem; margin: 2rem 0;">
-    <div style="text-align: center;"><h3 style="color:#1a5a3a;">✨ Keunggulan Qurban di Masjid An-Nur</h3></div>
+    <div style="text-align: center;"><h3 style="color:#1a5a3a;">✨ Keunggulan Qurban di Masjid At-taubah</h3></div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 1rem; margin-top: 1rem;">
         <div style="text-align:center;"><span style="font-size:1.8rem;">🕌</span><br/><strong>Langganan Masjid</strong><br/><small>DKM mengawal langsung</small></div>
         <div style="text-align:center;"><span style="font-size:1.8rem;">📱</span><br/><strong>Notifikasi WA</strong><br/><small>Update real-time</small></div>
