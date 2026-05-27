@@ -316,7 +316,7 @@ st.markdown("""
 st.markdown("""
 <div class="footer">
     <h4>🕌 Masjid At-taubah</h4>
-    <p>Jalan Candi No. 123, Kota Sidoarjo | Telp: (021) 1234-5678<br/>
+    <p>Jalan Gempol No. 123, Kabupaten Pasuruan | Telp: (021) 1234-5678<br/>
     WhatsApp: 0812-3456-7890 | Email: qurban@masjidattaubah.id</p>
     <small>© 1447 H / 2026 M • Bintan Nabilah-Dini Oktabiyanti-Sinta Bella</small>
 </div>
