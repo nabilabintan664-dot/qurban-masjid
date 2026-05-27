@@ -172,7 +172,7 @@ st.markdown("""
 # ============ HEADER ============
 st.markdown("""
 <div class="main-header">
-    <h1>🕌 Qurban Masjid An-Nur 1447 H</h1>
+    <h1>🕌 Qurban Masjid At-taubah 1447 H</h1>
     <p>Tebarkan berkah & pilih hewan qurban terbaikmu</p>
 </div>
 """, unsafe_allow_html=True)
@@ -315,7 +315,7 @@ st.markdown("""
 # ============ FOOTER ============
 st.markdown("""
 <div class="footer">
-    <h4>🕌 Masjid An-Nur</h4>
+    <h4>🕌 Masjid At-taubah</h4>
     <p>Jalan Candi No. 123, Kota Sidoarjo | Telp: (021) 1234-5678<br/>
     WhatsApp: 0812-3456-7890 | Email: qurban@masjidannur.id</p>
     <small>© 1447 H / 2026 M • Bintan Nabilah-Dini Oktabiyanti-Sinta Bella-Aulia Riska</small>
