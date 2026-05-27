@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Konfigurasi halaman
 st.set_page_config(
-    page_title="Qurban - Masjid An-Nur",
+    page_title="Qurban - Masjid At- taubah",
     page_icon="🕌",
     layout="wide",
     initial_sidebar_state="collapsed"
