@@ -317,8 +317,8 @@ st.markdown("""
 <div class="footer">
     <h4>🕌 Masjid At-taubah</h4>
     <p>Jalan Candi No. 123, Kota Sidoarjo | Telp: (021) 1234-5678<br/>
-    WhatsApp: 0812-3456-7890 | Email: qurban@masjidannur.id</p>
-    <small>© 1447 H / 2026 M • Bintan Nabilah-Dini Oktabiyanti-Sinta Bella-Aulia Riska</small>
+    WhatsApp: 0812-3456-7890 | Email: qurban@masjidattaubah.id</p>
+    <small>© 1447 H / 2026 M • Bintan Nabilah-Dini Oktabiyanti-Sinta Bella</small>
 </div>
 """, unsafe_allow_html=True)
 
